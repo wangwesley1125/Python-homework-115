@@ -1,3 +1,5 @@
+# list1.sort(key=lambda x: x[4], reverse=True)
+
 student_name = input("學生姓名:")
 score1 = int(input("第一個成績:"))
 score2 = int(input("第二個成績:"))
