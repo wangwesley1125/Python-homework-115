@@ -1,0 +1,8 @@
+student_name = input("學生姓名:")
+score1 = int(input("第一個成績:"))
+score2 = int(input("第二個成績:"))
+score3 = int(input("第三個成績:"))
+print("學生姓名:" + student_name)
+print("第一個成績:" + str(score1))
+print("第二個成績:" + str(score2))
+print("第三個成績:" + str(score3))
