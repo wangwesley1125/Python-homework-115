@@ -5,6 +5,8 @@ same. The function should use a set to get the unique email addresses from the l
 your function with several different lists.
 '''
 
+# 解決 email_name 中會多空格
+
 def delete_duplicate(person_id, person_email):
     # print(person_id, person_email)
     # print(type(person_email)) => str
