@@ -5,28 +5,28 @@ same. The function should use a set to get the unique email addresses from the l
 your function with several different lists.
 '''
 
-# 解決 email_name 中會多空格
+def remove_duplicates(list):
 
-def delete_duplicate(person_id, person_email):
-    # print(person_id, person_email)
-    # print(type(person_email)) => str
-    email_name = []
+    seen = []
+    result_email = []
+    
+    for email in list:
+        if email.lower() not in seen:
+            seen.append(email.lower())
+            result_email.append(email)
 
-    for email in person_email.split("@example.com"):
-        # print(email.lower())
-        email_name.append(email)
-    print(person_id, email_name)
+    return result_email
 
-    # print(*email_name, sep='')
+email_list = ['john@example.com', 
+              'bob@example.com', 
+              'John@example.com', 
+              'jOhn@example.com', 
+              'jjoweek@example.com', 
+              'Jjoweek@example.com',
+              'Wesley@example.com',
+              'wesley@example.com',
+              'WESLEY@example.com',
+              'wEsLeY@example.com']
 
-
-
-email_list = [[1, "john@example.com"],
-              [2, "bob@example.com"],
-              [3, "John@example.com"]]
-
-# print(len(email_list)) => 3
-
-for i in range(len(email_list)):
-    delete_duplicate(email_list[i][0], email_list[i][1])
-
+result_email = remove_duplicates(email_list)
+print(*list(result_email), sep="\n")
